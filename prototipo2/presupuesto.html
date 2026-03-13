@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es" class="wp-theme-gcpp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presupuesto — Portal GCPP | EsSalud</title>
+  <meta name="description" content="Gerencia de Presupuesto. Ejecución presupuestal, informes de gestión y normativa presupuestal.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/theme.css" rel="stylesheet">
+</head>
+<body class="page page-template-page-subgerencia has-admin-bar">
+
+  <div class="wp-admin-bar">
+    <a href="#" class="ab-item wp-logo"><i class="bi bi-wordpress"></i></a>
+    <a href="#" class="ab-item"><i class="bi bi-speedometer2"></i> Panel</a>
+    <a href="#" class="ab-item"><i class="bi bi-pencil-square"></i> Editar página</a>
+    <span class="ab-right"><a href="#" class="ab-item"><i class="bi bi-person-circle"></i> admin_gcpp</a></span>
+  </div>
+
+  <div class="site-header-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span><i class="bi bi-geo-alt-fill me-1"></i> Jr. Domingo Cueto 120, Jesús María, Lima</span>
+      <div class="d-none d-md-flex gap-3">
+        <a href="#"><i class="bi bi-telephone-fill me-1"></i>(01) 265-6000</a>
+        <a href="#"><i class="bi bi-envelope-fill me-1"></i>gcpp@essalud.gob.pe</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="site-branding">
+          <a href="index.html"><img src="../images/essalud_logo.png" alt="EsSalud" class="site-logo"></a>
+          <div><p class="site-title">GCPP</p><p class="site-description">Gerencia Central de Planeamiento y Presupuesto</p></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg wp-nav-menu">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrimary" style="border-color:rgba(255,255,255,.3)"><span class="navbar-toggler-icon" style="filter:invert(1);"></span></button>
+      <div class="collapse navbar-collapse" id="menuPrimary">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Inicio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown"><i class="bi bi-building me-1"></i>Subgerencias</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="planeamiento.html"><i class="bi bi-diagram-3"></i> Planeamiento Corporativo</a></li>
+              <li><a class="dropdown-item" href="organizacion.html"><i class="bi bi-people"></i> Organización y Procesos</a></li>
+              <li><a class="dropdown-item" href="informacion.html"><i class="bi bi-bar-chart-line"></i> Gestión de la Información</a></li>
+              <li><a class="dropdown-item active" href="presupuesto.html"><i class="bi bi-cash-stack"></i> Presupuesto</a></li>
+              <li><a class="dropdown-item" href="inversiones.html"><i class="bi bi-graph-up-arrow"></i> Prog. Multianual e Inversiones</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="cifras.html"><i class="bi bi-pie-chart me-1"></i>EsSalud en Cifras</a></li>
+          <li class="nav-item"><a class="nav-link" href="noticias.html"><i class="bi bi-newspaper me-1"></i>Noticias</a></li>
+          <li class="nav-item"><a class="nav-link" href="documentos.html"><i class="bi bi-folder2-open me-1"></i>Documentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-chat-dots me-1"></i>Contacto</a></li>
+        </ul>
+        <form class="wp-search-form ms-auto" role="search"><input type="search" placeholder="Buscar..." name="s"></form>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="site-main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-9">
+            <h1><i class="bi bi-cash-stack me-2"></i>Gerencia de Presupuesto</h1>
+            <p class="page-description">Ejecución presupuestal, informes de gestión financiera y normativa presupuestal institucional.</p>
+          </div>
+          <div class="col-lg-3 text-end d-none d-lg-block"><i class="bi bi-cash-stack" style="font-size:4.5rem; opacity:.2;"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container" style="padding-top:20px; padding-bottom:40px;">
+      <div class="yoast-breadcrumbs">
+        <a href="index.html">Inicio</a><span class="separator">&rsaquo;</span>
+        <a href="#">Subgerencias</a><span class="separator">&rsaquo;</span>
+        <span class="current">Presupuesto</span>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-8">
+
+          <div class="content-block">
+            <h3 class="wp-block-heading">Sobre la Gerencia</h3>
+            <p>La Gerencia de Presupuesto es responsable de conducir la programación, formulación, aprobación, ejecución y evaluación del presupuesto institucional de EsSalud, en concordancia con la normativa del Sistema Nacional de Presupuesto Público.</p>
+          </div>
+
+          <!-- Ejecución Presupuestal -->
+          <div class="content-block">
+            <h3 class="wp-block-heading"><i class="bi bi-speedometer2 me-2" style="color:var(--wp-accent);"></i>Ejecución Presupuestal</h3>
+            <!-- ACF Group: datos_ejecucion -->
+            <div class="row g-3 mb-4">
+              <div class="col-md-4">
+                <div class="kpi-card"><div class="kpi-value" style="font-size:1.3rem;">S/ 15,840M</div><div class="kpi-label">PIM 2026</div></div>
+              </div>
+              <div class="col-md-4">
+                <div class="kpi-card alt"><div class="kpi-value" style="font-size:1.3rem;">S/ 14,969M</div><div class="kpi-label">Devengado</div></div>
+              </div>
+              <div class="col-md-4">
+                <div class="kpi-card"><div class="kpi-value" style="font-size:1.3rem;">94.5%</div><div class="kpi-label">% Ejecución</div></div>
+              </div>
+            </div>
+
+            <!-- TablePress -->
+            <h5>Ejecución por Genérica de Gasto — Febrero 2026</h5>
+            <div class="table-responsive">
+              <table class="table table-striped table-hover tablepress">
+                <thead style="background:var(--wp-primary); color:#fff;">
+                  <tr><th>Genérica</th><th class="text-end">PIM (S/ M)</th><th class="text-end">Devengado</th><th class="text-end">% Ejec.</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Personal y obligaciones sociales</td><td class="text-end">6,320.5</td><td class="text-end">6,150.2</td><td class="text-end"><span class="badge bg-success">97.3%</span></td></tr>
+                  <tr><td>Bienes y servicios</td><td class="text-end">5,840.3</td><td class="text-end">5,490.8</td><td class="text-end"><span class="badge bg-success">94.0%</span></td></tr>
+                  <tr><td>Prestaciones y asistencia social</td><td class="text-end">2,180.0</td><td class="text-end">2,050.4</td><td class="text-end"><span class="badge bg-success">94.1%</span></td></tr>
+                  <tr><td>Inversiones</td><td class="text-end">1,200.0</td><td class="text-end">1,020.6</td><td class="text-end"><span class="badge bg-warning text-dark">85.1%</span></td></tr>
+                  <tr><td>Otros gastos</td><td class="text-end">299.2</td><td class="text-end">257.0</td><td class="text-end"><span class="badge bg-warning text-dark">85.9%</span></td></tr>
+                  <tr style="font-weight:700; background:var(--wp-accent-light);"><td>TOTAL</td><td class="text-end">15,840.0</td><td class="text-end">14,969.0</td><td class="text-end"><span class="badge bg-primary">94.5%</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="font-size:.78rem; color:var(--wp-text-light);"><i class="bi bi-info-circle me-1"></i>Fuente: SIAF — Datos al 28 de febrero de 2026.</p>
+          </div>
+
+          <!-- Informes -->
+          <div class="content-block">
+            <h3 class="wp-block-heading"><i class="bi bi-file-earmark-text me-2" style="color:var(--wp-accent);"></i>Informes de Gestión</h3>
+            <div class="wpdr-document">
+              <i class="bi bi-file-earmark-pdf-fill wpdr-icon"></i>
+              <div class="wpdr-info"><h6>Informe de Ejecución Presupuestal — Febrero 2026</h6><span><i class="bi bi-hdd me-1"></i>980 KB &nbsp;|&nbsp; <i class="bi bi-clock me-1"></i>5 Mar 2026</span></div>
+              <a href="#" class="btn btn-sm btn-primary"><i class="bi bi-download me-1"></i>Descargar</a>
+            </div>
+            <div class="wpdr-document">
+              <i class="bi bi-file-earmark-pdf-fill wpdr-icon"></i>
+              <div class="wpdr-info"><h6>Informe de Ejecución Presupuestal — Enero 2026</h6><span><i class="bi bi-hdd me-1"></i>920 KB &nbsp;|&nbsp; <i class="bi bi-clock me-1"></i>5 Feb 2026</span></div>
+              <a href="#" class="btn btn-sm btn-primary"><i class="bi bi-download me-1"></i>Descargar</a>
+            </div>
+            <div class="wpdr-document">
+              <i class="bi bi-file-earmark-pdf-fill wpdr-icon"></i>
+              <div class="wpdr-info"><h6>Presupuesto Institucional de Apertura (PIA) 2026</h6><span><i class="bi bi-hdd me-1"></i>1.5 MB &nbsp;|&nbsp; <i class="bi bi-clock me-1"></i>Ene 2026</span></div>
+              <a href="#" class="btn btn-sm btn-primary"><i class="bi bi-download me-1"></i>Descargar</a>
+            </div>
+            <div class="wpdr-document">
+              <i class="bi bi-file-earmark-pdf-fill wpdr-icon"></i>
+              <div class="wpdr-info"><h6>Evaluación Presupuestal Anual 2025</h6><span><i class="bi bi-hdd me-1"></i>2.3 MB &nbsp;|&nbsp; <i class="bi bi-clock me-1"></i>Feb 2026</span></div>
+              <a href="#" class="btn btn-sm btn-primary"><i class="bi bi-download me-1"></i>Descargar</a>
+            </div>
+          </div>
+
+          <!-- Normativa -->
+          <div class="content-block">
+            <h3 class="wp-block-heading"><i class="bi bi-book me-2" style="color:var(--wp-accent);"></i>Normativa Presupuestal</h3>
+            <div class="wpdr-document">
+              <i class="bi bi-file-earmark-pdf-fill wpdr-icon"></i>
+              <div class="wpdr-info"><h6>Directiva de Ejecución Presupuestal 2026</h6><span><i class="bi bi-hdd me-1"></i>450 KB</span></div>
+              <a href="#" class="btn btn-sm btn-primary"><i class="bi bi-download me-1"></i>Descargar</a>
+            </div>
+            <div class="wpdr-document">
+              <i class="bi bi-file-earmark-pdf-fill wpdr-icon"></i>
+              <div class="wpdr-info"><h6>Ley de Presupuesto del Sector Público 2026</h6><span><i class="bi bi-hdd me-1"></i>1.2 MB</span></div>
+              <a href="#" class="btn btn-sm btn-primary"><i class="bi bi-download me-1"></i>Descargar</a>
+            </div>
+            <div class="wpdr-document">
+              <i class="bi bi-file-earmark-pdf-fill wpdr-icon"></i>
+              <div class="wpdr-info"><h6>D.L. N° 1440 — Sistema Nacional de Presupuesto Público</h6><span><i class="bi bi-hdd me-1"></i>680 KB</span></div>
+              <a href="#" class="btn btn-sm btn-primary"><i class="bi bi-download me-1"></i>Descargar</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <aside class="widget">
+            <h3 class="widget-title"><i class="bi bi-person-badge me-1"></i>Gerente</h3>
+            <div class="text-center">
+              <div style="width:90px; height:90px; background:var(--wp-accent-light); border-radius:50%; margin:0 auto 10px; display:flex; align-items:center; justify-content:center;"><i class="bi bi-person" style="font-size:2.5rem; color:var(--wp-primary);"></i></div>
+              <strong>CPC. Ana Rodríguez López</strong>
+              <p style="font-size:.82rem; color:var(--wp-text-light); margin:2px 0 0;">Gerente de Presupuesto</p>
+            </div>
+          </aside>
+          <aside class="widget">
+            <h3 class="widget-title"><i class="bi bi-envelope me-1"></i>Contacto del Área</h3>
+            <p style="font-size:.85rem;"><i class="bi bi-telephone me-2" style="color:var(--wp-accent);"></i>(01) 265-6000 Anexo 1504</p>
+            <p style="font-size:.85rem;"><i class="bi bi-envelope me-2" style="color:var(--wp-accent);"></i>presupuesto@essalud.gob.pe</p>
+          </aside>
+          <aside class="widget">
+            <h3 class="widget-title"><i class="bi bi-link-45deg me-1"></i>Accesos Rápidos</h3>
+            <ul>
+              <li><i class="bi bi-arrow-right-circle-fill"></i><a href="#">MEF — Consulta Amigable</a></li>
+              <li><i class="bi bi-arrow-right-circle-fill"></i><a href="#">SIAF</a></li>
+              <li><i class="bi bi-arrow-right-circle-fill"></i><a href="#">Transparencia Económica</a></li>
+              <li><i class="bi bi-arrow-right-circle-fill"></i><a href="#">DGPP — Presupuesto Público</a></li>
+            </ul>
+          </aside>
+          <aside class="widget">
+            <h3 class="widget-title"><i class="bi bi-newspaper me-1"></i>Noticias del Área</h3>
+            <ul>
+              <li><a href="#">Ejecución presupuestal alcanza 94.5%</a><br><small style="color:var(--wp-text-light);">5 Mar 2026</small></li>
+              <li><a href="#">PIA 2026 aprobado por S/ 15,840 millones</a><br><small style="color:var(--wp-text-light);">3 Ene 2026</small></li>
+            </ul>
+          </aside>
+          <aside class="widget">
+            <h3 class="widget-title"><i class="bi bi-grid me-1"></i>Otras Subgerencias</h3>
+            <ul>
+              <li><i class="bi bi-diagram-3"></i><a href="planeamiento.html">Planeamiento Corporativo</a></li>
+              <li><i class="bi bi-people"></i><a href="organizacion.html">Organización y Procesos</a></li>
+              <li><i class="bi bi-bar-chart-line"></i><a href="informacion.html">Gestión de la Información</a></li>
+              <li><i class="bi bi-graph-up-arrow"></i><a href="inversiones.html">Prog. Multianual e Inversiones</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4"><img src="../images/essalud_logo.png" alt="EsSalud" class="footer-logo"><p>Gerencia Central de Planeamiento y Presupuesto — EsSalud</p></div>
+        <div class="col-lg-4"><h5>Mapa del Sitio</h5><div class="row"><div class="col-6"><ul class="list-unstyled"><li class="mb-1"><a href="index.html">Inicio</a></li><li class="mb-1"><a href="planeamiento.html">Planeamiento</a></li><li class="mb-1"><a href="organizacion.html">Organización</a></li><li class="mb-1"><a href="informacion.html">Información</a></li></ul></div><div class="col-6"><ul class="list-unstyled"><li class="mb-1"><a href="presupuesto.html">Presupuesto</a></li><li class="mb-1"><a href="inversiones.html">Inversiones</a></li><li class="mb-1"><a href="cifras.html">EsSalud en Cifras</a></li><li class="mb-1"><a href="contacto.html">Contacto</a></li></ul></div></div></div>
+        <div class="col-lg-4"><h5>Contacto</h5><p><i class="bi bi-telephone me-2"></i>(01) 265-6000</p><p><i class="bi bi-envelope me-2"></i>gcpp@essalud.gob.pe</p></div>
+      </div>
+      <div class="footer-bottom"><p class="mb-0">&copy; 2026 EsSalud — GCPP | Desarrollado por <a href="https://adg.com.pe" target="_blank">ADG Systems</a> | Powered by <a href="#"><i class="bi bi-wordpress"></i> WordPress</a></p></div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

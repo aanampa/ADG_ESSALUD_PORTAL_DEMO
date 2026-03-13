@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es" class="wp-theme-gcpp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de la Información — Portal GCPP | EsSalud</title>
+  <meta name="description" content="Gerencia de Gestión de la Información. Boletines estadísticos, reportes, dashboards y datos abiertos.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/theme.css" rel="stylesheet">
+</head>
+<body class="page page-template-page-subgerencia has-admin-bar">
+
+  <div class="wp-admin-bar">
+    <a href="#" class="ab-item wp-logo"><i class="bi bi-wordpress"></i></a>
+    <a href="#" class="ab-item"><i class="bi bi-speedometer2"></i> Panel</a>
+    <a href="#" class="ab-item"><i class="bi bi-pencil-square"></i> Editar página</a>
+    <span class="ab-right"><a href="#" class="ab-item"><i class="bi bi-person-circle"></i> admin_gcpp</a></span>
+  </div>
+
+  <div class="site-header-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span><i class="bi bi-geo-alt-fill me-1"></i> Jr. Domingo Cueto 120, Jesús María, Lima</span>
+      <div class="d-none d-md-flex gap-3">
+        <a href="#"><i class="bi bi-telephone-fill me-1"></i>(01) 265-6000</a>
+        <a href="#"><i class="bi bi-envelope-fill me-1"></i>gcpp@essalud.gob.pe</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="site-branding">
+          <a href="index.html"><img src="../images/essalud_logo.png" alt="EsSalud" class="site-logo"></a>
+          <div><p class="site-title">GCPP</p><p class="site-description">Gerencia Central de Planeamiento y Presupuesto</p></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg wp-nav-menu">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrimary" style="border-color:rgba(255,255,255,.3)"><span class="navbar-toggler-icon" style="filter:invert(1);"></span></button>
+      <div class="collapse navbar-collapse" id="menuPrimary">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Inicio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown"><i class="bi bi-building me-1"></i>Subgerencias</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="planeamiento.html"><i class="bi bi-diagram-3"></i> Planeamiento Corporativo</a></li>
+              <li><a class="dropdown-item" href="organizacion.html"><i class="bi bi-people"></i> Organización y Procesos</a></li>
+              <li><a class="dropdown-item active" href="informacion.html"><i class="bi bi-bar-chart-line"></i> Gestión de la Información</a></li>
+              <li><a class="dropdown-item" href="presupuesto.html"><i class="bi bi-cash-stack"></i> Presupuesto</a></li>
+              <li><a class="dropdown-item" href="inversiones.html"><i class="bi bi-graph-up-arrow"></i> Prog. Multianual e Inversiones</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="cifras.html"><i class="bi bi-pie-chart me-1"></i>EsSalud en Cifras</a></li>
+          <li class="nav-item"><a class="nav-link" href="noticias.html"><i class="bi bi-newspaper me-1"></i>Noticias</a></li>
+          <li class="nav-item"><a class="nav-link" href="documentos.html"><i class="bi bi-folder2-open me-1"></i>Documentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-chat-dots me-1"></i>Contacto</a></li>
+        </ul>
+        <form class="wp-search-form ms-auto" role="search"><input type="search" placeholder="Buscar..." name="s"></form>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="site-main">
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-9">
+            <h1><i class="bi bi-bar-chart-line me-2"></i>Gerencia de Gestión de la Información</h1>
+            <p class="page-description">Boletines estadísticos, reportes, dashboards y datos abiertos para la toma de decisiones.</p>
+          </div>
+          <div class="col-lg-3 text-end d-none d-lg-block"><i class="bi bi-bar-chart-line" style="font-size:4.5rem; opacity:.2;"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container" style="padding-top:20px; padding-bottom:40px;">
+
+      <div class="yoast-breadcrumbs">
+        <a href="index.html">Inicio</a><span class="separator">&rsaquo;</span>
+        <a href="#">Subgerencias</a><span class="separator">&rsaquo;</span>
+        <span class="current">Gestión de la Información</span>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-8">
+
+          <div class="content-block">
+            <h3 class="wp-block-heading">Sobre la Gerencia</h3>
+            <p>La Gerencia de Gestión de la Información tiene como misión generar, procesar y difundir la información estadística e indicadores de gestión de EsSalud, facilitando la toma de decisiones basada en evidencia a todos los niveles de la organización.</p>
+          </div>
+
+          <!-- Boletines Estadísticos -->
+          <div class="content-block">
+            <h3 class="wp-block-heading"><i class="bi bi-journal-richtext me-2" style="color:var(--wp-accent);"></i>Boletines Estadísticos</h3>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="content-block text-center" style="border-top:4px solid var(--wp-accent); padding:20px; margin:0;">
+                  <i class="bi bi-file-earmark-bar-graph" style="font-size:2.5rem; color:var(--wp-accent);"></i>
+                  <h6 class="mt-2">Boletín Mensual N° 02-2026</h6>
+                  <p style="font-size:.8rem; color:var(--wp-text-light);">Febrero 2026 — 3.1 MB</p>
+                  <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-download me-1"></i>Descargar PDF</a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="content-block text-center" style="border-top:4px solid var(--wp-primary); padding:20px; margin:0;">
+                  <i class="bi bi-file-earmark-bar-graph" style="font-size:2.5rem; color:var(--wp-primary);"></i>
+                  <h6 class="mt-2">Boletín Mensual N° 01-2026</h6>
+                  <p style="font-size:.8rem; color:var(--wp-text-light);">Enero 2026 — 2.9 MB</p>
+                  <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-download me-1"></i>Descargar PDF</a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="content-block text-center" style="border-top:4px solid var(--wp-accent); padding:20px; margin:0;">
+                  <i class="bi bi-book" style="font-size:2.5rem; color:var(--wp-accent);"></i>
+                  <h6 class="mt-2">Anuario Estadístico 2025</h6>
+                  <p style="font-size:.8rem; color:var(--wp-text-light);">Compilado anual — 8.2 MB</p>
+                  <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-download me-1"></i>Descargar PDF</a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="content-block text-center" style="border-top:4px solid var(--wp-primary); padding:20px; margin:0;">
+                  <i class="bi bi-clipboard-data" style="font-size:2.5rem; color:var(--wp-primary);"></i>
+                  <h6 class="mt-2">Reporte de Indicadores Trimestral</h6>
+                  <p style="font-size:.8rem; color:var(--wp-text-light);">I Trim 2026 — 1.4 MB</p>
+                  <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-download me-1"></i>Descargar PDF</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dashboards -->
+          <div class="content-block">
+            <h3 class="wp-block-heading"><i class="bi bi-display me-2" style="color:var(--wp-accent);"></i>Dashboards</h3>
+            <p>Paneles interactivos con indicadores de producción, aseguramiento y gestión actualizados periódicamente.</p>
+            <figure class="wp-block-image my-3 text-center">
+              <img src="https://placehold.co/700x350/E0F7FA/005BA1?text=Dashboard+Interactivo%0AIndicadores+de+Gestión+EsSalud&font=roboto" alt="Dashboard" class="img-fluid rounded shadow-sm">
+              <figcaption style="font-size:.8rem; color:var(--wp-text-light); margin-top:8px;">Dashboard de indicadores de gestión — Actualización mensual</figcaption>
+            </figure>
+          </div>
+
+          <!-- Datos Abiertos -->
+          <div class="content-block">
+            <h3 class="wp-block-heading"><i class="bi bi-database me-2" style="color:var(--wp-accent);"></i>Datos Abiertos</h3>
+            <p>En cumplimiento de la política de datos abiertos del Estado peruano, ponemos a disposición conjuntos de datos institucionales en formatos reutilizables.</p>
+            <div class="table-responsive">
+              <table class="table table-hover tablepress">
+                <thead style="background:var(--wp-primary); color:#fff;">
+                  <tr><th>Dataset</th><th>Formato</th><th>Actualización</th><th>Acción</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Producción de servicios por red asistencial</td><td><span class="badge bg-success">CSV</span></td><td>Mensual</td><td><a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a></td></tr>
+                  <tr><td>Asegurados por tipo de seguro y departamento</td><td><span class="badge bg-success">CSV</span></td><td>Mensual</td><td><a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a></td></tr>
+                  <tr><td>Ejecución presupuestal por genérica de gasto</td><td><span class="badge bg-warning text-dark">XLSX</span></td><td>Mensual</td><td><a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a></td></tr>
+                  <tr><td>Indicadores de gestión por red asistencial</td><td><span class="badge bg-success">CSV</span></td><td>Trimestral</td><td><a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <aside class="widget">
+            <h3 class="widget-title"><i class="bi bi-person-badge me-1"></i>Gerente</h3>
+            <div class="text-center">
+              <div style="width:90px; height:90px; background:var(--wp-accent-light); border-radius:50%; margin:0 auto 10px; display:flex; align-items:center; justify-content:center;">
+                <i class="bi bi-person" style="font-size:2.5rem; color:var(--wp-primary);"></i>
+              </div>
+              <strong>Ing. Carlos Mendoza Ríos</strong>
+              <p style="font-size:.82rem; color:var(--wp-text-light); margin:2px 0 0;">Gerente de Gestión de la Información</p>
+            </div>
+          </aside>
+          <aside class="widget">
+            <h3 class="widget-title"><i class="bi bi-envelope me-1"></i>Contacto del Área</h3>
+            <p style="font-size:.85rem;"><i class="bi bi-telephone me-2" style="color:var(--wp-accent);"></i>(01) 265-6000 Anexo 1503</p>
+            <p style="font-size:.85rem;"><i class="bi bi-envelope me-2" style="color:var(--wp-accent);"></i>informacion@essalud.gob.pe</p>
+          </aside>
+          <aside class="widget">
+            <h3 class="widget-title"><i class="bi bi-link-45deg me-1"></i>Accesos Rápidos</h3>
+            <ul>
+              <li><i class="bi bi-arrow-right-circle-fill"></i><a href="cifras.html">EsSalud en Cifras</a></li>
+              <li><i class="bi bi-arrow-right-circle-fill"></i><a href="#">Datos Abiertos del Estado</a></li>
+              <li><i class="bi bi-arrow-right-circle-fill"></i><a href="#">INEI</a></li>
+              <li><i class="bi bi-arrow-right-circle-fill"></i><a href="#">SUSALUD — Indicadores</a></li>
+            </ul>
+          </aside>
+          <aside class="widget">
+            <h3 class="widget-title"><i class="bi bi-grid me-1"></i>Otras Subgerencias</h3>
+            <ul>
+              <li><i class="bi bi-diagram-3"></i><a href="planeamiento.html">Planeamiento Corporativo</a></li>
+              <li><i class="bi bi-people"></i><a href="organizacion.html">Organización y Procesos</a></li>
+              <li><i class="bi bi-cash-stack"></i><a href="presupuesto.html">Presupuesto</a></li>
+              <li><i class="bi bi-graph-up-arrow"></i><a href="inversiones.html">Prog. Multianual e Inversiones</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4"><img src="../images/essalud_logo.png" alt="EsSalud" class="footer-logo"><p>Gerencia Central de Planeamiento y Presupuesto — EsSalud</p></div>
+        <div class="col-lg-4"><h5>Mapa del Sitio</h5><div class="row"><div class="col-6"><ul class="list-unstyled"><li class="mb-1"><a href="index.html">Inicio</a></li><li class="mb-1"><a href="planeamiento.html">Planeamiento</a></li><li class="mb-1"><a href="organizacion.html">Organización</a></li><li class="mb-1"><a href="informacion.html">Información</a></li></ul></div><div class="col-6"><ul class="list-unstyled"><li class="mb-1"><a href="presupuesto.html">Presupuesto</a></li><li class="mb-1"><a href="inversiones.html">Inversiones</a></li><li class="mb-1"><a href="cifras.html">EsSalud en Cifras</a></li><li class="mb-1"><a href="contacto.html">Contacto</a></li></ul></div></div></div>
+        <div class="col-lg-4"><h5>Contacto</h5><p><i class="bi bi-telephone me-2"></i>(01) 265-6000</p><p><i class="bi bi-envelope me-2"></i>gcpp@essalud.gob.pe</p></div>
+      </div>
+      <div class="footer-bottom"><p class="mb-0">&copy; 2026 EsSalud — GCPP | Desarrollado por <a href="https://adg.com.pe" target="_blank">ADG Systems</a> | Powered by <a href="#"><i class="bi bi-wordpress"></i> WordPress</a></p></div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

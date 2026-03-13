@@ -1,0 +1,533 @@
+/* ============================================
+   Theme: GCPP EsSalud - WordPress Child Theme
+   Base: Starter Theme + Bootstrap 5
+   CMS: WordPress 6.x + Gutenberg
+   ============================================ */
+
+:root {
+  --wp-primary: #005BA1;
+  --wp-primary-dark: #003D6B;
+  --wp-accent: #00A5B5;
+  --wp-accent-light: #E0F7FA;
+  --wp-bg: #F0F2F5;
+  --wp-card: #FFFFFF;
+  --wp-text: #1D2327;
+  --wp-text-light: #646970;
+  --wp-border: #E2E4E7;
+  --wp-success: #00A32A;
+  --wp-warning: #DBA617;
+  --wp-radius: 8px;
+  --wp-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  --wp-shadow-hover: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+/* ---- RESET & BASE ---- */
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  color: var(--wp-text);
+  background: var(--wp-bg);
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+a { color: var(--wp-primary); text-decoration: none; transition: color .2s; }
+a:hover { color: var(--wp-accent); }
+img { max-width: 100%; height: auto; }
+h1,h2,h3,h4,h5,h6 { color: var(--wp-primary-dark); font-weight: 700; line-height: 1.3; }
+
+/* ---- WP ADMIN BAR (solo para editores logueados) ---- */
+.wp-admin-bar {
+  background: #1D2327;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 13px;
+  color: #C3C4C7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.wp-admin-bar a { color: #C3C4C7; }
+.wp-admin-bar a:hover { color: #72AEFF; }
+.wp-admin-bar .ab-item { padding: 0 8px; display: inline-flex; align-items: center; gap: 4px; height: 32px; }
+.wp-admin-bar .ab-item:hover { background: #2C3338; }
+.wp-admin-bar .ab-right { margin-left: auto; }
+.wp-admin-bar .wp-logo { font-size: 16px; }
+body.has-admin-bar { padding-top: 32px; }
+
+/* ---- SITE HEADER ---- */
+.site-header-top {
+  background: var(--wp-primary-dark);
+  padding: 6px 0;
+  font-size: 12px;
+  color: rgba(255,255,255,.65);
+}
+.site-header-top a { color: rgba(255,255,255,.65); }
+.site-header-top a:hover { color: #fff; }
+
+.site-header {
+  background: var(--wp-card);
+  border-bottom: 3px solid var(--wp-primary);
+  padding: 0;
+}
+.site-branding {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+}
+.site-branding img.site-logo { height: 56px; }
+.site-branding .site-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--wp-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+.site-branding .site-description {
+  font-size: .78rem;
+  color: var(--wp-text-light);
+  margin: 0;
+}
+
+/* ---- WP NAV MENU (wp_nav_menu) ---- */
+.wp-nav-menu {
+  background: var(--wp-primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+body.has-admin-bar .wp-nav-menu { top: 32px; }
+
+.wp-nav-menu .navbar-nav .nav-link {
+  color: rgba(255,255,255,.88) !important;
+  font-size: .88rem;
+  font-weight: 500;
+  padding: .7rem 1rem !important;
+  border-bottom: 3px solid transparent;
+  transition: all .2s;
+}
+.wp-nav-menu .navbar-nav .nav-link:hover,
+.wp-nav-menu .navbar-nav .nav-link.active {
+  color: #fff !important;
+  background: rgba(255,255,255,.08);
+  border-bottom-color: var(--wp-accent);
+}
+.wp-nav-menu .dropdown-menu {
+  border: none;
+  border-radius: var(--wp-radius);
+  box-shadow: var(--wp-shadow-hover);
+  padding: 6px 0;
+  min-width: 260px;
+}
+.wp-nav-menu .dropdown-item {
+  font-size: .85rem;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.wp-nav-menu .dropdown-item:hover {
+  background: var(--wp-accent-light);
+  color: var(--wp-primary);
+}
+.wp-nav-menu .wp-search-form {
+  display: flex;
+  align-items: center;
+}
+.wp-nav-menu .wp-search-form input {
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.2);
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: .82rem;
+  width: 160px;
+  transition: all .3s;
+}
+.wp-nav-menu .wp-search-form input::placeholder { color: rgba(255,255,255,.5); }
+.wp-nav-menu .wp-search-form input:focus {
+  width: 220px;
+  background: rgba(255,255,255,.25);
+  outline: none;
+  border-color: var(--wp-accent);
+}
+
+/* ---- GUTENBERG BLOCKS ---- */
+
+/* wp:cover */
+.wp-block-cover {
+  position: relative;
+  background: linear-gradient(135deg, var(--wp-primary) 0%, var(--wp-primary-dark) 70%);
+  color: #fff;
+  padding: 60px 0;
+  overflow: hidden;
+}
+.wp-block-cover::before {
+  content: '';
+  position: absolute;
+  right: -100px;
+  top: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0,165,181,.2) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.wp-block-cover h1 { color: #fff; font-size: 2.1rem; }
+.wp-block-cover p.lead { opacity: .9; font-size: 1.05rem; }
+
+/* wp:group */
+.wp-block-group { padding: 48px 0; }
+.wp-block-group.has-background { background: var(--wp-card); }
+
+/* wp:heading with decorador */
+.wp-block-heading {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+}
+.wp-block-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--wp-accent);
+  border-radius: 2px;
+}
+.wp-block-heading.has-text-align-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* wp:columns */
+.wp-block-columns { display: flex; gap: 24px; flex-wrap: wrap; }
+.wp-block-column { flex: 1; min-width: 280px; }
+
+/* wp:media-text */
+.wp-block-media-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--wp-card);
+  border-radius: var(--wp-radius);
+  overflow: hidden;
+  box-shadow: var(--wp-shadow);
+}
+.wp-block-media-text img { width: 100%; height: 100%; object-fit: cover; }
+.wp-block-media-text .wp-block-media-text__content { padding: 32px; }
+
+/* ---- CPT: NOTICIAS (Custom Post Type) ---- */
+.cpt-noticia-featured {
+  border-radius: var(--wp-radius);
+  overflow: hidden;
+  background: var(--wp-card);
+  box-shadow: var(--wp-shadow);
+  transition: transform .3s, box-shadow .3s;
+}
+.cpt-noticia-featured:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--wp-shadow-hover);
+}
+.cpt-noticia-featured .post-thumbnail {
+  height: 340px;
+  object-fit: cover;
+  width: 100%;
+}
+.cpt-noticia-featured .entry-content { padding: 20px 24px; }
+.cpt-noticia-featured .entry-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: .78rem;
+  color: var(--wp-text-light);
+  margin-bottom: 8px;
+}
+
+.cpt-noticia-card {
+  background: var(--wp-card);
+  border-radius: var(--wp-radius);
+  overflow: hidden;
+  box-shadow: var(--wp-shadow);
+  transition: all .3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.cpt-noticia-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--wp-shadow-hover);
+}
+.cpt-noticia-card .post-thumbnail {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
+.cpt-noticia-card .entry-content {
+  padding: 16px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.cpt-noticia-card .entry-title {
+  font-size: .95rem;
+  margin: 6px 0 8px;
+  line-height: 1.4;
+}
+.cpt-noticia-card .entry-title a { color: var(--wp-primary-dark); }
+.cpt-noticia-card .entry-title a:hover { color: var(--wp-accent); }
+.cpt-noticia-card .entry-summary {
+  font-size: .83rem;
+  color: var(--wp-text-light);
+  flex: 1;
+}
+.cpt-noticia-card .entry-meta {
+  font-size: .75rem;
+  color: var(--wp-text-light);
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid var(--wp-border);
+}
+
+/* Taxonomy badge */
+.taxonomy-badge {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.tax-planeamiento { background: #E3F2FD; color: #1565C0; }
+.tax-presupuesto { background: #E8F5E9; color: #2E7D32; }
+.tax-organizacion { background: #FFF3E0; color: #E65100; }
+.tax-informacion { background: #E0F7FA; color: #00838F; }
+.tax-inversiones { background: #F3E5F5; color: #7B1FA2; }
+.tax-cifras { background: #FCE4EC; color: #C62828; }
+
+/* ---- WIDGETS (WP Sidebar) ---- */
+.widget {
+  background: var(--wp-card);
+  border-radius: var(--wp-radius);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--wp-shadow);
+}
+.widget-title {
+  font-size: .95rem;
+  color: var(--wp-primary-dark);
+  border-bottom: 2px solid var(--wp-accent);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+  margin-top: 0;
+}
+.widget ul { list-style: none; padding: 0; margin: 0; }
+.widget ul li {
+  padding: 7px 0;
+  border-bottom: 1px solid var(--wp-border);
+  font-size: .85rem;
+}
+.widget ul li:last-child { border-bottom: none; }
+.widget ul li i { color: var(--wp-accent); margin-right: 6px; width: 16px; }
+
+/* Widget: Noticias Recientes (WP Recent Posts) */
+.widget-recent-post {
+  display: flex;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--wp-border);
+}
+.widget-recent-post:last-child { border-bottom: none; }
+.widget-recent-post img {
+  width: 70px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.widget-recent-post .wrp-title {
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--wp-primary-dark);
+  line-height: 1.3;
+}
+.widget-recent-post .wrp-date { font-size: .72rem; color: var(--wp-text-light); }
+
+/* ---- ACCESOS RÁPIDOS (ACF Repeater) ---- */
+.acf-acceso-card {
+  background: var(--wp-card);
+  border-radius: var(--wp-radius);
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: var(--wp-shadow);
+  transition: all .3s;
+  height: 100%;
+  border-top: 4px solid transparent;
+  position: relative;
+}
+.acf-acceso-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--wp-shadow-hover);
+  border-top-color: var(--wp-accent);
+}
+.acf-acceso-card .acf-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--wp-accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  font-size: 1.4rem;
+  color: var(--wp-primary);
+  transition: all .3s;
+}
+.acf-acceso-card:hover .acf-icon {
+  background: var(--wp-primary);
+  color: #fff;
+}
+.acf-acceso-card h5 {
+  font-size: .88rem;
+  margin-bottom: 6px;
+}
+.acf-acceso-card p {
+  font-size: .78rem;
+  color: var(--wp-text-light);
+  margin: 0;
+}
+
+/* ---- KPI Cards (ACF + Gutenberg) ---- */
+.kpi-card {
+  background: linear-gradient(135deg, var(--wp-primary), var(--wp-accent));
+  color: #fff;
+  border-radius: var(--wp-radius);
+  padding: 20px;
+  text-align: center;
+  transition: transform .3s;
+}
+.kpi-card:hover { transform: scale(1.03); }
+.kpi-card .kpi-value { font-size: 2rem; font-weight: 800; }
+.kpi-card .kpi-label { font-size: .82rem; opacity: .9; }
+.kpi-card.alt { background: linear-gradient(135deg, var(--wp-accent), var(--wp-primary)); }
+
+/* ---- DOCUMENTOS (WP Document Revisions) ---- */
+.wpdr-document {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--wp-card);
+  border-radius: var(--wp-radius);
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  box-shadow: var(--wp-shadow);
+  transition: box-shadow .2s;
+}
+.wpdr-document:hover { box-shadow: var(--wp-shadow-hover); }
+.wpdr-document .wpdr-icon { font-size: 1.8rem; color: #E53935; flex-shrink: 0; }
+.wpdr-document .wpdr-info { flex: 1; }
+.wpdr-document .wpdr-info h6 { margin: 0 0 2px; font-size: .88rem; }
+.wpdr-document .wpdr-info span { font-size: .75rem; color: var(--wp-text-light); }
+
+/* ---- YOAST BREADCRUMBS ---- */
+.yoast-breadcrumbs {
+  background: var(--wp-card);
+  padding: 10px 16px;
+  border-radius: var(--wp-radius);
+  font-size: .82rem;
+  color: var(--wp-text-light);
+  box-shadow: var(--wp-shadow);
+  margin-bottom: 20px;
+}
+.yoast-breadcrumbs a { color: var(--wp-primary); }
+.yoast-breadcrumbs .separator { margin: 0 6px; color: #ccc; }
+
+/* ---- CONTACT FORM 7 ---- */
+.wpcf7 .wpcf7-form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--wp-border);
+  border-radius: var(--wp-radius);
+  font-size: .9rem;
+  transition: border-color .2s;
+}
+.wpcf7 .wpcf7-form-control:focus {
+  border-color: var(--wp-primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0,91,161,.15);
+}
+.wpcf7 label { font-size: .85rem; font-weight: 500; margin-bottom: 4px; display: block; }
+.wpcf7 .wpcf7-submit {
+  background: var(--wp-primary);
+  color: #fff;
+  border: none;
+  padding: 10px 28px;
+  border-radius: var(--wp-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s;
+}
+.wpcf7 .wpcf7-submit:hover { background: var(--wp-primary-dark); }
+
+/* ---- PAGE TEMPLATE: SUBGERENCIA ---- */
+.page-hero {
+  background: linear-gradient(135deg, var(--wp-primary) 0%, var(--wp-primary-dark) 100%);
+  color: #fff;
+  padding: 40px 0;
+}
+.page-hero h1 { color: #fff; font-size: 1.7rem; margin-bottom: 4px; }
+.page-hero .page-description { opacity: .85; margin: 0; font-size: .95rem; }
+
+.content-block {
+  background: var(--wp-card);
+  border-radius: var(--wp-radius);
+  padding: 28px;
+  margin-bottom: 20px;
+  box-shadow: var(--wp-shadow);
+}
+
+/* ---- FOOTER (footer.php) ---- */
+.site-footer {
+  background: var(--wp-primary-dark);
+  color: rgba(255,255,255,.7);
+  padding: 40px 0 16px;
+  font-size: .85rem;
+}
+.site-footer h5 { color: #fff; font-size: .95rem; margin-bottom: 14px; }
+.site-footer a { color: rgba(255,255,255,.7); }
+.site-footer a:hover { color: var(--wp-accent); }
+.site-footer .footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-top: 14px;
+  margin-top: 28px;
+  font-size: .78rem;
+  text-align: center;
+}
+.site-footer .footer-logo {
+  height: 36px;
+  background: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 991px) {
+  .wp-block-media-text { grid-template-columns: 1fr; }
+  .wp-block-cover { padding: 40px 0; }
+  .wp-block-cover h1 { font-size: 1.5rem; }
+}
+@media (max-width: 767px) {
+  .wp-admin-bar { display: none; }
+  body.has-admin-bar { padding-top: 0; }
+  .cpt-noticia-featured .post-thumbnail { height: 200px; }
+  .kpi-card .kpi-value { font-size: 1.5rem; }
+}
